@@ -1,2 +1,2 @@
 To run the game:
-# >python main.py
+> python main.py
