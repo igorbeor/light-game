@@ -13,6 +13,9 @@ def main():
     # the game ends when one of the characters runs out of health points
     while user.health_point > 0 and computer.health_point > 0:
         if turn == 'user':
+            print(('Select an action:\n1. To deal damage in a mid range(18-25'
+            ').\n2. To deal damage in a high range(10-35).\n3. To heal yourse'
+            'lf(18-25).'))
             turn = 'computer'
             move = input('Enter choice: ')
             if move == '1':
@@ -47,7 +50,8 @@ def main():
                 heal = computer.heal_yourself()
                 print('The enemy has restored his character {} health points.'
                     .format(heal))
-        print('{}: {}HP\nComputer: {}HP\n'.format(user.name, user.health_point, computer.health_point))
+        print('{}: {}HP\nComputer: {}HP\n'.format(user.name,\
+            user.health_point, computer.health_point))
         sleep(2.0)
 
     if user.health_point > computer.health_point:
